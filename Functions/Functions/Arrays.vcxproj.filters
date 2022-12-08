@@ -15,39 +15,39 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Functions\FillRand.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Functions\main.cpp">
+    <ClCompile Include="FillRand.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Functions\Print.cpp">
+    <ClCompile Include="Print.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Functions\Shift.cpp">
+    <ClCompile Include="Shift.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Functions\Statictics.cpp">
+    <ClCompile Include="Statictics.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Functions\constants.h">
+    <ClInclude Include="stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\Functions\FillRand.h">
+    <ClInclude Include="constants.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\Functions\Print.h">
+    <ClInclude Include="FillRand.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\Functions\Shift.h">
+    <ClInclude Include="Print.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\Functions\Statistics.h">
+    <ClInclude Include="Shift.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\Functions\stdafx.h">
+    <ClInclude Include="Statistics.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

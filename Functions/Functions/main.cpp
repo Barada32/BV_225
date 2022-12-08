@@ -1,53 +1,53 @@
-Ôªø#include<iostream>
-using namespace std;
+#include"stdafx.h"
+#include"constants.h"
+#include"FillRand.h"
+#include"Print.h"
+#include"Shift.h"
+#include"Statistics.h"
 
-int Add(int a, int b = 0, int c = 0);	//–ü—Ä–æ—Ç–æ—Ç–∏–ø —Ñ—É–Ω–∫—Ü–∏–∏ (–û–±—ä—è–≤–ª–µ–Ω–∏–µ —Ñ—É–Ω–∫—Ü–∏–∏ - Function declaration)
-int Sub(int a, int b);
-int Mul(int a, int b);
-int Div(int a, int b);
-void ASCII()
-{
-	cout << "–°–∞–º—É—Ä–∞–π –±–µ–∑ –º–µ—á–∞ –ø–æ–¥–æ–±–µ–Ω —Å–∞–º—É—Ä–∞—é —Å –º–µ—á–µ–º ;-)" << endl;
-}
+void Sort(int arr[], const int n);
 
 void main()
 {
 	setlocale(LC_ALL, "");
-	ASCII();
-	int a, b;
-	cout << "–í–≤–µ–¥–∏—Ç–µ –¥–≤–∞ —á–∏—Å–ª–∞: "; cin >> a >> b;
-	int c = Add(a, b, 5);	//–ò—Å–ø–æ–ª—å–∑–æ–≤–∞–Ω–∏–µ —Ñ—É–Ω–∫—Ü–∏–∏ (–í—ã–∑–æ–≤ —Ñ—É–Ω–∫—Ü–∏–∏ - Function call)
-	cout << a << " + " << b << " = " << c << endl;
-	cout << a << " - " << b << " = " << Sub(a, b) << endl;
-	cout << a << " * " << b << " = " << Mul(a, b) << endl;
-	cout << a << " / " << b << " = " << Div(a, b) << endl;
 
-	//Too few arguments in function call
-	//Too many arguments in function call
-	//Function doesn't take N arguments
+	//type name[SIZE];
 
-	//				Default parameters
-	//Redefinition of default parameter
-}
+	const int n = 10;
+	int arr[n] = { 0,1,2,3,4,5,6,7,8,9 };
 
-int Add(int a, int b, int c)	//–†–µ–∞–ª–∏–∑–∞—Ü–∏—è —Ñ—É–Ω–∫—Ü–∏–∏ (–û–ø—Ä–µ–¥–µ–ª–µ–Ω–∏–µ —Ñ—É–Ω–∫—Ü–∏–∏ - Function definition)
-{
-	//Addition - —Å–ª–æ–∂–µ–Ω–∏–µ
-	int sum = a + b;
-	return sum;
-}
-int Sub(int a, int b)
-{
-	//Subtraction - –≤—ã—á–∏—Ç–∞–Ω–∏–µ
-	return a - b;
-}
-int Mul(int a, int b)
-{
-	//Multiplication - —É–º–Ω–æ–∂–µ–Ω–∏–µ
-	return a * b;
-}
-int Div(int a, int b)
-{
-	//Division - –¥–µ–ª–µ–Ω–∏–µ
-	return a / b;
+	FillRand(arr, n);
+	Print(arr, n);
+	cout << "—ÛÏÏ‡ ˝ÎÂÏÂÌÚÓ‚ Ï‡ÒÒË‚‡: " << Sum(arr, n) << endl;
+	cout << "—Â‰ÌÂÂ-‡ËÙÏÂÚË˜ÂÒÍÓÂ ˝ÎÂÏÂÌÚÓ‚ Ï‡ÒÒË‚‡: " << Avg(arr, n) << endl;
+	cout << "ÃËÌËÏ‡Î¸ÌÓÂ ÁÌ‡˜ÂÌËÂ ‚ Ï‡ÒÒË‚Â: " << minValueIn(arr, n) << endl;
+	cout << "Ã‡ÍÒËÏ‡Î¸ÌÓÂ ÁÌ‡˜ÂÌËÂ ‚ Ï‡ÒÒË‚Â: " << maxValueIn(arr, n) << endl;
+	Sort(arr, n);
+	Print(arr, n);
+
+	int number_of_shifts;
+	cout << "¬‚Â‰ËÚÂ ÍÓÎË˜ÂÒÚ‚Ó Ò‰‚Ë„Ó‚: "; cin >> number_of_shifts;
+	shiftRight(arr, n, number_of_shifts);
+	Print(arr, n);
+
+	cout << delimiter << endl;
+
+	const int SIZE = 8;
+	double brr[SIZE];
+	FillRand(brr, SIZE);
+	Print(brr, SIZE);
+	/*cout << "—ÛÏÏ‡ ˝ÎÂÏÂÌÚÓ‚ Ï‡ÒÒË‚‡: " << Sum(brr, SIZE) << endl;
+	cout << "—Â‰ÌÂÂ-‡ËÙÏÂÚË˜ÂÒÍÓÂ ˝ÎÂÏÂÌÚÓ‚ Ï‡ÒÒË‚‡: " << Avg(brr, SIZE) << endl;
+	cout << "ÃËÌËÏ‡Î¸ÌÓÂ ÁÌ‡˜ÂÌËÂ ‚ Ï‡ÒÒË‚Â: " << minValueIn(brr, SIZE) << endl;
+	cout << "Ã‡ÍÒËÏ‡Î¸ÌÓÂ ÁÌ‡˜ÂÌËÂ ‚ Ï‡ÒÒË‚Â: " << maxValueIn(brr, SIZE) << endl;*/
+
+
+	int i_arr_2[ROWS][COLS];
+	FillRand(i_arr_2, ROWS, COLS);
+	Print(i_arr_2, ROWS, COLS);
+	cout << delimiter << endl;
+
+	double d_arr_2[ROWS][COLS];
+	FillRand(d_arr_2, ROWS, COLS);
+	Print(d_arr_2, ROWS, COLS);
 }
