@@ -156,6 +156,7 @@
     <ClInclude Include="..\Functions\Shift.h" />
     <ClInclude Include="..\Functions\Statistics.h" />
     <ClInclude Include="..\Functions\stdafx.h" />
+    <ClInclude Include="sort.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
